@@ -14,10 +14,12 @@ export default function Home() {
 				</p>
 
 				<div className="mt-2">
-					<button className="btn btn-sm btn-primary btn-disabled">
-						Lists
-					</button>
-					<Link href="/latest">
+					<Link href="/confused/popular">
+						<button className="btn btn-sm btn-primary">
+							Popular
+						</button>
+					</Link>
+					<Link href="/confused/latest">
 						<button className="btn btn-sm btn-info ml-2">
 							Latest
 						</button>

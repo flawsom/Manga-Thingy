@@ -41,7 +41,7 @@ const MangaInput = () => {
 
 	return (
 		<main>
-			<div className="flex flex-row items-center justify-center mt-4">
+			<div className="flex flex-row items-center justify-center mt-4 p-0.5">
 				<input
 					type="search"
 					placeholder="Search for mangas here"

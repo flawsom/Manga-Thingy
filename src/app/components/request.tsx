@@ -41,9 +41,9 @@ export const imageFetcher = async (id: string, provider: string) => {
 	return data;
 };
 
-export const MangareaderLatest = async () => {
+export const MangareaderLatest = async (type: string) => {
 	const res = await fetch(
-		"https://manga-scrapers.onrender.com/flamescans/sort/added",
+		`https://manga-scrapers.onrender.com/flamescans/sort/${type}`,
 		{ next: { revalidate: 21600 } }
 	);
 	const data = await res.json();
