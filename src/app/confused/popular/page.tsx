@@ -7,7 +7,7 @@ const FlamescansPopular = async () => {
 	const format = await ResultsFormatter(data, "flamescans");
 
 	return (
-		<div className="lg:w-7/12 flex flex-col items-center justify-center">
+		<div className="lg:w-7/12 m-auto">
 			<div className="breadcrumbs text-sm mt-4">
 				<ul>
 					<li>
