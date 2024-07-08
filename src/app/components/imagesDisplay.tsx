@@ -9,23 +9,26 @@ const ImageDisplay = async (data: any, provider: string) => {
 		mangapillCondition = true;
 	}
 	return (
-		<div className="mt-4">
+		<div className="mt-4 flex flex-col items-center">
 			{data &&
 				data.results.map(
 					(item: string, index: Key | null | undefined) => (
-						<Image
-							key={index}
-							width={720}
-							height={2717}
-							src={
-								mangapillCondition
-									? `https://manga-scrapers.onrender.com/${provider}/images/${item}`
-									: item
-							}
-							alt="Manga Page"
-							className="w-full h-auto"
-							priority
-						></Image>
+						<section className="mb-2">
+							<Image
+								key={index}
+								width={720}
+								height={2717}
+								src={
+									mangapillCondition
+										? `https://manga-scrapers.onrender.com/${provider}/images/${item}`
+										: item
+								}
+								alt="Manga Page"
+								className="w-auto h-auto"
+								priority
+							></Image>
+							<p className="text-center">{index}</p>
+						</section>
 					)
 				)}
 		</div>
