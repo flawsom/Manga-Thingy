@@ -49,14 +49,15 @@ const MangaInput = () => {
 						setSearchTitle(event.target.value);
 					}}
 					onKeyDown={async (event) => await makeRequest(event)}
-					className="input input-bordered w-full max-w-xs"
+					className="input input-bordered w-full max-w-md"
 				/>
 				<select
-					className="select select-bordered w-1/2 max-w-xs ml-1"
+					className="select select-bordered max-w-xs ml-1"
 					onChange={handleChange}
 				>
 					<option value="mangareader">Mangareader</option>
 					<option value="flamescans">Flamecomics</option>
+					<option value="mangapill">Mangapill</option>
 				</select>
 			</div>
 			<div className="flex items-center justify-center">{results}</div>

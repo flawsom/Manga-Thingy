@@ -4,17 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ResultsFormatter = async (data: Results, provider: string) => {
+	var mangapillCondition: boolean;
+	if (provider == "mangapill") {
+		mangapillCondition = true;
+	}
+
 	return (
-		<div className="grid grid-cols-2 gap-3 mt-4 lg:grid-cols-5 md:grid-cols-3">
+		<div className="grid grid-cols-2 gap-3 mt-4 lg:grid-cols-5 md:grid-cols-3 scroll-smooth">
 			{data &&
 				data.results.map((item, index) => (
 					<div
 						key={index}
-						className="card card-compact bg-base-100 w-48 shadow-lg"
+						className="card card-compact bg-base-100 w-48 shadow-lg hover:scale-95 transition ease-in-out duration-200 cursor-pointer"
 					>
 						<figure>
 							<Image
-								src={item.image}
+								src={
+									mangapillCondition
+										? `https://manga-scrapers.onrender.com/${provider}/images/${item.image}`
+										: item.image
+								}
 								alt="Manga Poster"
 								width={150}
 								height={200}

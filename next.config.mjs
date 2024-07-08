@@ -17,6 +17,12 @@ const nextConfig = {
 			{
 				hostname: "sup-proxy.zephex0-f6c.workers.dev",
 			},
+			{
+				hostname: "cdn.readdetectiveconan.com",
+			},
+			{
+				hostname: "manga-scrapers.onrender.com",
+			},
 		],
 	},
 	logging: {

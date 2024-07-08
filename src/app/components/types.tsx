@@ -55,3 +55,19 @@ interface flamecomicschapters {
 	id: string;
 	title: string;
 }
+
+export interface Mangapill {
+	status: Number;
+	results: mangapillinforesults;
+}
+
+interface mangapillinforesults {
+	image: string;
+	title: string;
+	description: string;
+	type: string;
+	status: string;
+	year: string;
+	genres: string[];
+	chapters: flamecomicschapters[];
+}

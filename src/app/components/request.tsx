@@ -1,6 +1,6 @@
 "use server";
 
-import { Results, FlamecomicsInfo, MangareaderInfo } from "./types";
+import { Results, FlamecomicsInfo, MangareaderInfo, Mangapill } from "./types";
 
 const parent_url = (provider: string, title: string) => {
 	return `https://manga-scrapers.onrender.com/${provider}/search/${title}`;
@@ -29,6 +29,15 @@ export const fetchMangareaderInfo = async (id: string) => {
 		{ next: { revalidate: 21600 } }
 	);
 	const data: MangareaderInfo = await res.json();
+	return data;
+};
+
+export const fetchMangapillInfo = async (id: string) => {
+	const res = await fetch(
+		`https://manga-scrapers.onrender.com/mangapill/info/${id}`,
+		{ next: { revalidate: 21600 } }
+	);
+	const data: Mangapill = await res.json();
 	return data;
 };
 
