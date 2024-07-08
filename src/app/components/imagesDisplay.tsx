@@ -9,7 +9,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 		mangapillCondition = true;
 	}
 	return (
-		<div className="mt-4">
+		<div className="mt-4 max-w-lg w-auto">
 			{data &&
 				data.results.map(
 					(item: string, index: Key | null | undefined) => (
@@ -23,7 +23,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 									: item
 							}
 							alt="Manga Page"
-							className="w-full h-auto lg:max-w-lg m-auto"
+							className="w-full h-auto"
 							priority
 						></Image>
 					)
