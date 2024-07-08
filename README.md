@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MangaThingy
 
-## Getting Started
+Welcome to MangaThingy, your one-stop solution for all your manga needs! With MangaThingy, you can search for popular and latest manga from multiple providers and read them for free.
 
-First, run the development server:
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Overview](#code-overview)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Introduction
+MangaThingy is a web application that allows users to search for manga across different providers and read them online. The application is built with Next.js and provides a smooth and responsive user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+- Search for manga by title.
+- View popular and latest manga.
+- Select from different manga providers: Mangareader, Flamescans, and Mangapill.
+- View detailed information about each manga.
+- Read manga chapters directly within the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
+To run MangaThingy locally, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/MangaThingy.git
+   cd MangaThingy
+   ```
 
-## Learn More
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Open your browser and navigate to `http://localhost:3000`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Usage
+- Use the search bar to find your favorite manga by title.
+- Select the provider from the dropdown to fetch results from Mangareader, Flamescans, or Mangapill.
+- Click on the manga cards to view more details and read chapters.
+- Use the navigation bar to access popular and latest manga sections.
 
-## Deploy on Vercel
+## Code Overview
+### Components
+- **`MangaInput.tsx`**: Handles the search functionality and input fields.
+- **`ResultsFormatter.tsx`**: Formats and displays the search results.
+- **`ChapterSelector.tsx`**: Allows users to select and read manga chapters.
+- **`ImageDisplay.tsx`**: Displays manga images for the selected chapter.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Pages
+- **`page.tsx`**: The homepage welcoming users and providing navigation links to popular and latest manga.
+- **`[provider]/[id].tsx`**: Dynamic routing for viewing detailed manga information and chapters.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### API Requests
+- **`fetchData`**: Fetches search results from the selected provider.
+- **`fetchFlameInfo`**, **`fetchMangareaderInfo`**, **`fetchMangapillInfo`**: Fetch detailed information for a specific manga.
+- **`imageFetcher`**: Fetches images for the selected manga chapter.
+- **`MangareaderLatest`**: Fetches the latest manga from the selected provider.
+
+### Layout
+- **`Layout.tsx`**: Defines the layout of the application, including the navbar and theme controller.
+
+## Contributing
+We welcome contributions from the community! If you want to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```sh
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes.
+4. Commit your changes:
+   ```sh
+   git commit -m 'Add some feature'
+   ```
+5. Push to the branch:
+   ```sh
+   git push origin feature/YourFeature
+   ```
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
