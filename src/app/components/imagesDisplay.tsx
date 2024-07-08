@@ -23,7 +23,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 									: item
 							}
 							alt="Manga Page"
-							className="w-full h-auto lg:max-w-xl m-auto"
+							className="w-full h-auto lg:max-w-lg m-auto"
 							priority
 						></Image>
 					)
