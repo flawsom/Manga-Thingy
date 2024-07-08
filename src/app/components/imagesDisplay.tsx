@@ -9,7 +9,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 		mangapillCondition = true;
 	}
 	return (
-		<div className="mt-4 flex flex-col items-center">
+		<div className="mt-4 flex flex-col items-center w-5/6">
 			{data &&
 				data.results.map(
 					(item: string, index: Key | null | undefined) => (
