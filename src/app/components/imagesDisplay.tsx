@@ -13,9 +13,8 @@ const ImageDisplay = async (data: any, provider: string) => {
 			{data &&
 				data.results.map(
 					(item: string, index: Key | null | undefined) => (
-						<section className="mb-2">
+						<section className="mb-2" key={index}>
 							<Image
-								key={index}
 								width={720}
 								height={2717}
 								src={
