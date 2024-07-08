@@ -9,7 +9,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 		mangapillCondition = true;
 	}
 	return (
-		<div className="mt-4 max-w-lg w-auto">
+		<div className="mt-4">
 			{data &&
 				data.results.map(
 					(item: string, index: Key | null | undefined) => (
